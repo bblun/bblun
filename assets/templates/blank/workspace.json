@@ -1,0 +1,27 @@
+{
+  "main": {
+    "type": "block",
+    "data": {
+      "blocks": {
+        "languageVersion": 0,
+        "blocks": []
+      }
+    }
+  },
+  "setting": {
+    "data": {
+      "gutterPosition": "50",
+      "openInspector": false,
+      "wideToolbox": true,
+      "codeView": false,
+      "themeMode": "dark",
+      "modules": [
+        "babylon.js",
+        "pep.min.js",
+        "babylon.gridMaterial.min.js",
+        "tweakpane.min.js",
+        "babylon.gui.min.js"
+      ]
+    }
+  }
+}

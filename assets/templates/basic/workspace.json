@@ -1,0 +1,714 @@
+{
+  "main": {
+    "type": "block",
+    "data": {
+      "workspaceComments": [
+        {
+          "height": 378.1015625,
+          "width": 746.84375,
+          "id": "oEBCA6|pqTx:^C0;@21U",
+          "x": 90,
+          "y": -310,
+          "text": "这款软件所见即所得，不难掌握。本软件上下限很高，不懂编程的人上手就可以开发，因为我给你提供了各种预设和示例，你稍一改动就变成自己的应用了。程序员通过开放的插件系统可以订制拼图，甚至为其他设计师提供技术服务。如果你愿意研究，材质节点编辑器、扩展拼图就像是国中之国，内里又有乾坤，值得探索。\n\n我把Web3D领域有趣的东西包装成拼图送给你，不是正儿八经的学编程，就当个玩具玩一玩吧！\n\n先介绍一下界面：这里是拼图工作区，以这里为中心，上面是菜单栏，下面是状态栏，左边是工具栏，右边是视图区，最右边是侧边栏。\n\n菜单栏 - 新建、打开、执行、保存等等，一般软件菜单中该有的都在这里了\n状态栏 - 操作提示、快捷键指令、暂停/开始渲染、显示FPS，都属于辅助功能\n工具栏 - 拼图按照分类都在这里准备好了，这里是你的玩具箱\n视图区 - 场景渲染窗口\n侧边栏 - 视图最大化、场景检查器、拾色器、设置、帮助，都是常用功能，放在右边很顺手\n\n界面事关心情，怎么能轻视呢？这里准备了明暗两个主题，默认随着系统改变。如果你是浅色主题，一打眼可能朴素了点，可以通过设置-外观，改成深色主题，我个人也偏爱深色主题。\n\n掌握这款软件重点是会用工具栏中的拼图。拼图就是图形化的代码片段，通过互相之间的组合实现各种功能。\n\n1.如何找到拼图？\n\na.在工具栏拼图分类中查找。\nb.在右上角“查找拼图”中根据名称查找。\n  拼图名称可通过拼图右键菜单 - 打印拼图名称，打印到状态栏。\nc.在拼图右键菜单中创建。\n  选项类拼图要从拼图的右键菜单 - 创建选项 创建，如“创建环境”拼图的选项。\n  一些组合在一起使用的拼图也从拼图的右键菜单创建，如“添加加载任务”拼图右键菜单 - 创建“开始&监听加载”拼图\nd.使用快捷键创建。\n  常用拼图一般都有快捷键，如创建文本拼图Shift + T 、创建数组拼图Shift + A。\n  在查找拼图中输入“拼图快捷键”，查看所有拼图快捷键。\n\n2.拼图分类\n\n左侧工具栏的拼图分为三大类，以分隔线区分，分别是基础类、核心类、扩展类。另外，安装的插件会分到最底部的插件类。\n\n基础拼图 - 文本、数字等基础编程所需拼图\n核心拼图 - 网格、材质等Web3D核心功能拼图\n扩展拼图 - 依赖额外JS库实现特殊功能的拼图\n插件拼图 - 用户订制的拼图\n\n3.帮助和提示\n\n要知道一个拼图的功能可以通过帮助和提示。鼠标在拼图停留时会显示该拼图的功能提示，通过拼图右键菜单 - 帮助，会打开帮助文档。\n\n4.拼图操作\n\n关于拼图的一些基本操作这里就不介绍了，基本都在右键菜单里，包括：工作区右键菜单和拼图右键菜单。比如，这篇文档是在工作区空白处右键菜单 - 添加注释 创建的。\n\n5.中文支持\n\n在命名上需要注意以下几点：\na.软件中变量名、函数名、选项卡命名都是支持中文的；我个人因为编程习惯在这些地方会使用英文\nb.项目名称和描述使用中文是没有问题的\nc.项目内部资源不要使用中文，包括模型、贴图的名字及所在路径的命名，如assets/texture/backgroundSkybox.dds\n\n6.如何学习？\n\n要系统学习这款软件，拼图提示、帮助和教程都是必需的，然而研究示例其实是最快捷的。所以，我尝试以现在这种形式，在示例里面写教程，边学边做，希望能够帮你快速提高。\n\n关于这个示例的讲解见文档的快速上手教程，在这里不再重复了。\n\n"
+        }
+      ],
+      "blocks": {
+        "languageVersion": 0,
+        "blocks": [
+          {
+            "type": "advanced_comment",
+            "id": "/~KU{.TlM61X-GnpzR.{",
+            "x": 90,
+            "y": 90,
+            "extraState": {
+              "color": "#a5805b"
+            },
+            "fields": {
+              "COLOR": "#a5805b",
+              "INPUT": "使用了glb格式，所以场景改为右手坐标系，在“查找拼图”中输入“坐标系示意图”查看图解"
+            },
+            "next": {
+              "block": {
+                "type": "advanced_comment",
+                "id": ".oUG]xWC~;2;3~@O3iu:",
+                "extraState": {
+                  "color": "#a5805b"
+                },
+                "fields": {
+                  "COLOR": "#a5805b",
+                  "INPUT": "注意，本例引用的资源都来自本软件public/assets目录"
+                },
+                "next": {
+                  "block": {
+                    "type": "scene_properties_accessors",
+                    "id": "*whzo#0eSe47pTE6OK,j",
+                    "extraState": {
+                      "isStatement": true,
+                      "isValueInput": true
+                    },
+                    "fields": {
+                      "METHOD": "set",
+                      "KEY": "useRightHandedSystem"
+                    },
+                    "inputs": {
+                      "VALUE": {
+                        "shadow": {
+                          "type": "logic_boolean",
+                          "id": "`R;67IFROxW}oIr6tY3=",
+                          "fields": {
+                            "BOOL": "TRUE"
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "scene_create_default_environment",
+                        "id": "?O=q^}h]Q?IWgvqIa*3F",
+                        "inputs": {
+                          "OPTIONS": {
+                            "shadow": {
+                              "type": "empty_object",
+                              "id": "(I;_L4JKx),pVi)P9F{c"
+                            },
+                            "block": {
+                              "type": "object_create",
+                              "id": "b(HsyV|6,7Q?`Oa},E^8",
+                              "fields": {
+                                "EMPTY": false
+                              },
+                              "inputs": {
+                                "ITEM": {
+                                  "block": {
+                                    "type": "scene_create_default_environment_option",
+                                    "id": "j8zT,-v}9*N`gv]_VjzC",
+                                    "fields": {
+                                      "KEY": "skyboxColor"
+                                    },
+                                    "inputs": {
+                                      "VALUE": {
+                                        "shadow": {
+                                          "type": "field_color3",
+                                          "id": "D`5wF{+h|tQ|z^;,~i!4",
+                                          "fields": {
+                                            "R": 0.3,
+                                            "G": 0.2,
+                                            "B": 0.5
+                                          }
+                                        },
+                                        "block": {
+                                          "type": "material_color3_from_hex",
+                                          "id": "`s.P.=]TEiR,NWw*AXE/",
+                                          "inputs": {
+                                            "HEX": {
+                                              "shadow": {
+                                                "type": "text",
+                                                "id": "P3LKNYGx2=6rKi/vo-r:",
+                                                "fields": {
+                                                  "TEXT": "#e0eaec"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "scene_create_default_environment_option",
+                                        "id": "CoUFjnVXj_*|qcY}bp|n",
+                                        "fields": {
+                                          "KEY": "skyboxTexture"
+                                        },
+                                        "inputs": {
+                                          "VALUE": {
+                                            "shadow": {
+                                              "type": "text",
+                                              "id": "h$/LldK44*YGGZVUxTOx",
+                                              "fields": {
+                                                "TEXT": "/assets/texture/backgroundSkybox.dds"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "scene_create_default_environment_option",
+                                            "id": "[Y+XR/*rdbLF}LDgxK+N",
+                                            "fields": {
+                                              "KEY": "skyboxSize"
+                                            },
+                                            "inputs": {
+                                              "VALUE": {
+                                                "shadow": {
+                                                  "type": "math_number",
+                                                  "id": "A*TogX1p=KUWaYA8l5JX",
+                                                  "fields": {
+                                                    "NUM": 20
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "scene_create_default_environment_option",
+                                                "id": "V?2LT!UkI?`nQ52Q0+p(",
+                                                "fields": {
+                                                  "KEY": "groundTexture"
+                                                },
+                                                "inputs": {
+                                                  "VALUE": {
+                                                    "shadow": {
+                                                      "type": "text",
+                                                      "id": "cP6%6~M[oC^4rc7:[1ze",
+                                                      "fields": {
+                                                        "TEXT": "/assets/texture/backgroundGround.png"
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "scene_create_default_environment_option",
+                                                    "id": "%R|Z|s(*XG[r+myaqc2t",
+                                                    "fields": {
+                                                      "KEY": "groundColor"
+                                                    },
+                                                    "inputs": {
+                                                      "VALUE": {
+                                                        "shadow": {
+                                                          "type": "field_color3",
+                                                          "id": ".Oj~tls-rnM@qt:IM)7k",
+                                                          "fields": {
+                                                            "R": 0.3,
+                                                            "G": 0.2,
+                                                            "B": 0.4
+                                                          }
+                                                        },
+                                                        "block": {
+                                                          "type": "material_color3_from_hex",
+                                                          "id": "j3Gb(~{Lf[JC(S8})T,(",
+                                                          "inputs": {
+                                                            "HEX": {
+                                                              "shadow": {
+                                                                "type": "text",
+                                                                "id": "Qx+7cr4ithoq#@b.LVqd",
+                                                                "fields": {
+                                                                  "TEXT": "#e0eaec"
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "scene_create_default_environment_option",
+                                                        "id": "yWm01Ofb*tkPp}T7/b^2",
+                                                        "fields": {
+                                                          "KEY": "groundYBias"
+                                                        },
+                                                        "inputs": {
+                                                          "VALUE": {
+                                                            "shadow": {
+                                                              "type": "math_number",
+                                                              "id": "N%k[St[b^~kygbUsk%za",
+                                                              "fields": {
+                                                                "NUM": -0.01
+                                                              }
+                                                            }
+                                                          }
+                                                        },
+                                                        "next": {
+                                                          "block": {
+                                                            "type": "scene_create_default_environment_option",
+                                                            "id": ":XH+5~j+wk+;tg[L~2eS",
+                                                            "fields": {
+                                                              "KEY": "environmentTexture"
+                                                            },
+                                                            "inputs": {
+                                                              "VALUE": {
+                                                                "shadow": {
+                                                                  "type": "text",
+                                                                  "id": "ZLNCby/X~*`uAX8*qPz!",
+                                                                  "fields": {
+                                                                    "TEXT": "/assets/texture/environment.dds"
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "camera_property",
+                            "id": "o.@$H=Zyo(rV^zAMxZ_K",
+                            "extraState": {
+                              "isStatement": true,
+                              "isValueInput": true
+                            },
+                            "fields": {
+                              "METHOD": "set",
+                              "TYPE": "ArcRotateCamera",
+                              "KEY": "position"
+                            },
+                            "inputs": {
+                              "OBJECT": {
+                                "shadow": {
+                                  "type": "camera_selector",
+                                  "id": "}]NI7#Ba7.w|hS9`/Bg$",
+                                  "fields": {
+                                    "NAME": "defaultCamera"
+                                  }
+                                }
+                              },
+                              "VALUE": {
+                                "shadow": {
+                                  "type": "field_vector3",
+                                  "id": "aL)Z7Ez={cDHL(?R5N7T",
+                                  "fields": {
+                                    "X": 0,
+                                    "Y": 4,
+                                    "Z": 8
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "camera_property",
+                                "id": "AeLzNjzEzb9kYjNtogh`",
+                                "extraState": {
+                                  "isStatement": true,
+                                  "isValueInput": true
+                                },
+                                "fields": {
+                                  "METHOD": "set",
+                                  "TYPE": "ArcRotateCamera",
+                                  "KEY": "target"
+                                },
+                                "inputs": {
+                                  "OBJECT": {
+                                    "shadow": {
+                                      "type": "camera_selector",
+                                      "id": "-WbA,lFG5XA:@m0+E,6u",
+                                      "fields": {
+                                        "NAME": "defaultCamera"
+                                      }
+                                    }
+                                  },
+                                  "VALUE": {
+                                    "shadow": {
+                                      "type": "field_vector3",
+                                      "id": "./?X:x$@b-A$.St1Y$l:",
+                                      "fields": {
+                                        "X": 0,
+                                        "Y": 1,
+                                        "Z": 0
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "create_light",
+                                    "id": "VD)7|FmxTMT!1czPV+0L",
+                                    "inline": false,
+                                    "fields": {
+                                      "TYPE": "DirectionalLight"
+                                    },
+                                    "inputs": {
+                                      "NAME": {
+                                        "shadow": {
+                                          "type": "text",
+                                          "id": "UyXAp2#`(Q}iY9?rUBj_",
+                                          "fields": {
+                                            "TEXT": "keyLight"
+                                          }
+                                        }
+                                      },
+                                      "OPTIONS": {
+                                        "shadow": {
+                                          "type": "empty_object",
+                                          "id": "3srdpW{T;hz9PqK|g^MQ"
+                                        },
+                                        "block": {
+                                          "type": "object_create",
+                                          "id": ";BmzAPS(#nosWvfIwZ7t",
+                                          "fields": {
+                                            "EMPTY": false
+                                          },
+                                          "inputs": {
+                                            "ITEM": {
+                                              "block": {
+                                                "type": "create_directional_light_options",
+                                                "id": "r|dg`Qa6}$#LneyVHmZN",
+                                                "fields": {
+                                                  "KEY": "position"
+                                                },
+                                                "inputs": {
+                                                  "VALUE": {
+                                                    "shadow": {
+                                                      "type": "field_vector3",
+                                                      "id": "}-_|c#64ez@.dd({`_4T",
+                                                      "fields": {
+                                                        "X": 1.5,
+                                                        "Y": 3,
+                                                        "Z": 1.5
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "set_light_target",
+                                        "id": ";MN3e-*YDA}^QCUBg+d@",
+                                        "inputs": {
+                                          "LIGHT": {
+                                            "shadow": {
+                                              "type": "light_selector",
+                                              "id": "if9tv.itn4m)$o.ao;iN",
+                                              "fields": {
+                                                "NAME": "keyLight"
+                                              }
+                                            }
+                                          },
+                                          "TARGET": {
+                                            "shadow": {
+                                              "type": "field_vector3",
+                                              "id": "X/?0mhxNXco?/MrGM!.S",
+                                              "fields": {
+                                                "X": 0,
+                                                "Y": 0,
+                                                "Z": 0
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "display_light_gizmo",
+                                            "id": "a7{{3cdr8?a3?SV=BLO_",
+                                            "fields": {
+                                              "ENABLED": true
+                                            },
+                                            "inputs": {
+                                              "LIGHT": {
+                                                "shadow": {
+                                                  "type": "light_selector",
+                                                  "id": "PYa0TAuz$7u6zMm#ri:|",
+                                                  "fields": {
+                                                    "NAME": "keyLight"
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "create_shadow_for_light",
+                                                "id": "sYbY|i1Rx]IA}p=(4{/v",
+                                                "inline": false,
+                                                "fields": {
+                                                  "TYPE": "ShadowGenerator"
+                                                },
+                                                "inputs": {
+                                                  "LIGHT": {
+                                                    "shadow": {
+                                                      "type": "light_selector",
+                                                      "id": "R%]Fbll-%T#kFY),e!2e",
+                                                      "fields": {
+                                                        "NAME": "keyLight"
+                                                      }
+                                                    }
+                                                  },
+                                                  "OPTIONS": {
+                                                    "shadow": {
+                                                      "type": "empty_object",
+                                                      "id": "oTg-eOajA7%X7fYJN~t!"
+                                                    },
+                                                    "block": {
+                                                      "type": "object_create",
+                                                      "id": "v;ifg%H!*U)JbX)f8Z~t",
+                                                      "fields": {
+                                                        "EMPTY": false
+                                                      },
+                                                      "inputs": {
+                                                        "ITEM": {
+                                                          "block": {
+                                                            "type": "create_shadow_options",
+                                                            "id": "^:JpZYQ-R~yQqyaHy1R{",
+                                                            "fields": {
+                                                              "KEY": "bias"
+                                                            },
+                                                            "inputs": {
+                                                              "VALUE": {
+                                                                "shadow": {
+                                                                  "type": "math_number",
+                                                                  "id": "cis+_OlGQRIj?6;%gr,,",
+                                                                  "fields": {
+                                                                    "NUM": 0
+                                                                  }
+                                                                }
+                                                              }
+                                                            },
+                                                            "next": {
+                                                              "block": {
+                                                                "type": "create_shadow_options",
+                                                                "id": "Wwz(3G7NS?`/McM]65Tp",
+                                                                "fields": {
+                                                                  "KEY": "filter"
+                                                                },
+                                                                "inputs": {
+                                                                  "VALUE": {
+                                                                    "shadow": {
+                                                                      "type": "shadow_filter_dropdown",
+                                                                      "id": "~RKV9=p=[rhao4kXF!_6",
+                                                                      "fields": {
+                                                                        "MOD": "6"
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "scene_add_loading_task",
+                                                    "id": "Y:4f2`UeM|?cfm%SB6Kz",
+                                                    "fields": {
+                                                      "TYPE": "addMeshTask",
+                                                      "INVERT_Y": false
+                                                    },
+                                                    "inputs": {
+                                                      "NAME": {
+                                                        "shadow": {
+                                                          "type": "text",
+                                                          "id": "bHw1TrzlRWY!2MPWO:r0",
+                                                          "fields": {
+                                                            "TEXT": "loadCase"
+                                                          }
+                                                        }
+                                                      },
+                                                      "URL": {
+                                                        "shadow": {
+                                                          "type": "text",
+                                                          "id": "#3kO/NMWiDo9p+@Wgge9",
+                                                          "fields": {
+                                                            "TEXT": "/assets/scene/case.glb"
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    "next": {
+                                                      "block": {
+                                                        "type": "scene_listen_loading_event",
+                                                        "id": "F/u2+/P!9%YD[Or=W3e`",
+                                                        "extraState": {
+                                                          "enabledprogresscb": false
+                                                        },
+                                                        "inputs": {
+                                                          "ON_FINISH": {
+                                                            "block": {
+                                                              "type": "stop_all_animations",
+                                                              "id": "sj|FIK,emG~Q5W(vpveH",
+                                                              "next": {
+                                                                "block": {
+                                                                  "type": "add_shadow_caster",
+                                                                  "id": "*:hc9Qg$X{CB|Qk+K4m9",
+                                                                  "fields": {
+                                                                    "METHOD": "addShadowCaster"
+                                                                  },
+                                                                  "inputs": {
+                                                                    "MESH": {
+                                                                      "shadow": {
+                                                                        "type": "mesh_selector",
+                                                                        "id": "FE|GJLWq#V@^Kq^J%s92",
+                                                                        "fields": {
+                                                                          "NAME": "case"
+                                                                        }
+                                                                      }
+                                                                    },
+                                                                    "SHADOW": {
+                                                                      "block": {
+                                                                        "type": "get_shadow_from_light",
+                                                                        "id": ".}TO5,69N/X@cMuFWj-G",
+                                                                        "inputs": {
+                                                                          "LIGHT": {
+                                                                            "shadow": {
+                                                                              "type": "light_selector",
+                                                                              "id": "_aT.{BjveC+-:dKzIyMF",
+                                                                              "fields": {
+                                                                                "NAME": "keyLight"
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  },
+                                                                  "next": {
+                                                                    "block": {
+                                                                      "type": "event_add_actions_to_mesh",
+                                                                      "id": "%6z[s_Q,PG{uA/=CIab+",
+                                                                      "inputs": {
+                                                                        "MESH": {
+                                                                          "shadow": {
+                                                                            "type": "mesh_selector",
+                                                                            "id": "3{7?mFPqXr_S,hU+y]41",
+                                                                            "fields": {
+                                                                              "NAME": "case"
+                                                                            }
+                                                                          }
+                                                                        },
+                                                                        "ACTIONS": {
+                                                                          "block": {
+                                                                            "type": "event_mesh_action",
+                                                                            "id": "{lGY/2$/Y`BS2b8.]8Ox",
+                                                                            "fields": {
+                                                                              "ACTION": "PlayAnimationAction",
+                                                                              "TRIGGER": "BABYLON.ActionManager.OnPickTrigger",
+                                                                              "LOOP": false
+                                                                            },
+                                                                            "inputs": {
+                                                                              "OBJECT": {
+                                                                                "shadow": {
+                                                                                  "type": "mesh_selector",
+                                                                                  "id": "|$#DWWbF:E?F{8;@)06]",
+                                                                                  "fields": {
+                                                                                    "NAME": "boneTip"
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "FROM": {
+                                                                                "shadow": {
+                                                                                  "type": "math_number",
+                                                                                  "id": "xGtE1,o;S)E+oAHvc2Oz",
+                                                                                  "fields": {
+                                                                                    "NUM": 1
+                                                                                  }
+                                                                                }
+                                                                              },
+                                                                              "TO": {
+                                                                                "shadow": {
+                                                                                  "type": "math_number",
+                                                                                  "id": ";9%i}B.ivsYrvaOG`5T:",
+                                                                                  "fields": {
+                                                                                    "NUM": 20
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            },
+                                                                            "next": {
+                                                                              "block": {
+                                                                                "type": "event_mesh_action",
+                                                                                "id": "eTw`n#Yu*jq|4ZAiUq;e",
+                                                                                "fields": {
+                                                                                  "ACTION": "PlayAnimationAction",
+                                                                                  "TRIGGER": "BABYLON.ActionManager.NothingTrigger",
+                                                                                  "LOOP": false
+                                                                                },
+                                                                                "inputs": {
+                                                                                  "OBJECT": {
+                                                                                    "shadow": {
+                                                                                      "type": "mesh_selector",
+                                                                                      "id": "-yYozS(AaSg1T`u1tm6V",
+                                                                                      "fields": {
+                                                                                        "NAME": "boneTip"
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "FROM": {
+                                                                                    "shadow": {
+                                                                                      "type": "math_number",
+                                                                                      "id": ".Pph{%~S(zQ6F92xsOND",
+                                                                                      "fields": {
+                                                                                        "NUM": 19
+                                                                                      }
+                                                                                    }
+                                                                                  },
+                                                                                  "TO": {
+                                                                                    "shadow": {
+                                                                                      "type": "math_number",
+                                                                                      "id": "]}l`IoZDR^~lhq8N7|,q",
+                                                                                      "fields": {
+                                                                                        "NUM": 1
+                                                                                      }
+                                                                                    }
+                                                                                  }
+                                                                                }
+                                                                              }
+                                                                            }
+                                                                          }
+                                                                        }
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "setting": {
+    "data": {
+      "gutterPosition": "79",
+      "openInspector": false,
+      "glob": []
+    }
+  }
+}
