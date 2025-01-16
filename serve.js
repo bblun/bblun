@@ -24714,7 +24714,7 @@ var deno_default = {
   heroTitle: "",
   author: "",
   website: "https://bblun.github.io/",
-  github: "https://github.com/bblun/bblun/",
+  github: "https://github.com/bblun/",
   gitee: "",
   exports: "./bblun.js",
   imports: {
