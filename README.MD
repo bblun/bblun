@@ -9,7 +9,7 @@
 - [babylun-win.zip](https://github.com/bblun/bblun/releases/latest/)
 
 2. 从代码运行
-下载仓库到本地，安装[Deno](http://deno.com)，双击执行`run.bat`(win)或`run.sh`(macos)。脚本会打开系统默认浏览器，推荐使用谷歌chrome浏览器作为开发浏览器。
+- 下载[源代码](https://github.com/bblun/bblun/releases/latest/)到本地，安装[Deno](http://deno.com)，双击执行`run.bat`(win)或`run.sh`(macos)。脚本会打开系统默认浏览器，推荐使用谷歌chrome浏览器作为开发浏览器。
 
 ## 资源
 
