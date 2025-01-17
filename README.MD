@@ -5,11 +5,11 @@
 ## 下载
 
 1. 下载已构建版本
-- [babylun-macos-arm64.zip](https://github.com/bblun/bblun/releases/latest/)
-- [babylun-win.zip](https://github.com/bblun/bblun/releases/latest/)
+- [babylun-macos-arm64.zip](https://github.com/bblun/bblun/releases/download/v0.4.0/bblun-macos-arm64.zip)
+- [babylun-win.zip](https://github.com/bblun/bblun/releases/download/v0.4.0/bblun-win.zip)
 
-2. 从代码运行
-- 下载[源代码](https://github.com/bblun/bblun/releases/latest/)到本地，安装[Deno](http://deno.com)，双击执行`run.bat`(win)或`run.sh`(macos)。脚本会打开系统默认浏览器，推荐使用谷歌chrome浏览器作为开发浏览器。
+1. 从代码运行
+- 下载[源代码](https://github.com/bblun/bblun/archive/refs/tags/v0.4.0.zip)到本地，安装[Deno](http://deno.com)，双击执行`run.bat`(win)或`run.sh`(macos)。脚本会打开系统默认浏览器，推荐使用谷歌chrome浏览器作为开发浏览器。
 
 ## 资源
 
