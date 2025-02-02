@@ -5,11 +5,11 @@
 ## 下载
 
 1. 下载已构建版本
-- [babylun-macos-arm64.zip](https://github.com/bblun/bblun/releases/download/v0.4.0/bblun-macos-arm64.zip)
-- [babylun-win.zip](https://github.com/bblun/bblun/releases/download/v0.4.0/bblun-win.zip)
+- [babylun-macos-arm64.zip](https://github.com/bblun/bblun/releases/download/v0.5.0/bblun-macos-arm64.zip)
+- [babylun-win.zip](https://github.com/bblun/bblun/releases/download/v0.5.0/bblun-win.zip)
 
 2. 从代码运行
-- 下载[源码](https://github.com/bblun/bblun/archive/refs/tags/v0.4.0.zip)
+- 下载[源码](https://github.com/bblun/bblun/archive/refs/tags/v0.5.0.zip)
 - 安装[Deno](http://deno.com)
 - 启动服务：从命令行执行命令`deno -A serve.js`，或者执行脚本`run.bat`(win)或`run.sh`(macos)。
 - 脚本会打开系统默认浏览器，推荐使用谷歌chrome浏览器作为开发浏览器。
@@ -27,7 +27,7 @@
 
 ## 产品简介
 
-巴比轮是专为3D设计师打造的零代码3D网页开发工具。用户可将巴比轮用于学习、教学和开发商业项目，无需支付任何授权费用；工具没有任何功能限制；没有任何收费项目；开放插件系统，易于扩展功能。
+巴比轮是专为3D设计师打造的零代码3D网页开发工具。用户可将巴比轮用于学习、教学，无需支付任何授权费用；工具没有任何功能限制；没有任何收费项目；开放插件系统，易于扩展功能。
 
 本软件实质是将`BabylonJS`代码片段包装为拼图，供没有编程经验的设计师使用，因为只做了这么简单的一点事，所以能够免费发布出来，让更多人受益。
 

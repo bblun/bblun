@@ -73,6 +73,13 @@ body {
   background-color: var(--bg);
 }
 
+#root {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   color: var(--theme-color);

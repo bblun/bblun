@@ -24708,10 +24708,12 @@ function toUnicode(str) {
 var deno_default = {
   name: "bblun",
   zhname: "\u5DF4\u6BD4\u8F6E",
-  version: "0.4.0",
+  version: "0.5.0",
   description: "\u4E00\u6B3E\u96F6\u4EE3\u78013D\u7F51\u9875\u5F00\u53D1\u5DE5\u5177",
   logo: "data:image/vnd.microsoft.icon;base64,AAABAAEAICAAAAEAIADbAQAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAgAAAAIAgGAAAAc3p69AAAAaJJREFUeJzNl79KA0EQh08UNIWxSCAGKx9BEUFQsROEwIkPICls7H0ACYoKYmWlvViIprBQFEQJCmJ3hSAIi1YSQRsV/Psbdw+XITku4XbXhQ/u2GXnu81NbsbztCFm+jJgGRyBKvhOiKracwlkvVoDEwXwmGDQelAMnwcvWgjMKYbBc+DVgcALyJNAyUHwkBIJXDsUCEjgzaHAk9fA4g9wB87BHtgC22AfXNJmzUjEFZgFqZr5+5dJbWAEVEwI+FHBmUgKlI0KCJm69LTjYAh0sfl+8GxSYIHNX+gSuG4BVzYFKJOG2ZozmwIH7AS6wb1JgV4wphgEaXb8K+DLmEBEBrSDVfAZc18jadgJNo2eAO4nwYZiXcg/qow23wGObb6ExBpbM2dboMzWTNsUeABTNk+gB4wKmYYDghWaQmbDiTGBqIG1rWAevFsVwJo0mIj75I0KUAF5I+S3ngqQHbCrrk/BrZAFS+zAukBTlUxC/JZkgUOB4F+U5Xn1G9sOTs1QLnyD3bVmWhr5wk5zSp1yoV4uZ4VsoU2054dgUWhfTRo/Cu5CrPvq7GgAAAAASUVORK5CYII=",
+  hero: "/media/hero.jpg",
   heroTitle: "",
+  footerInfo: "\u672C\u8F6F\u4EF6\u4EC5\u7528\u4E8E\u6280\u672F\u4EA4\u6D41",
   author: "",
   website: "https://bblun.github.io/",
   github: "https://github.com/bblun/",
@@ -25706,8 +25708,10 @@ async function apiInitProject_default(ctx) {
   data.APP_NAME = deno_default.name;
   data.VERSION = deno_default.version;
   data.DESCRIPTION = deno_default.description;
+  data.HERO = deno_default.hero;
   data.HERO_TITLE = deno_default.heroTitle;
   data.AUTHOR = deno_default.author;
+  data.FOOTER_INFO = deno_default.footerInfo;
   data.WEBSITE = deno_default.website;
   data.EMAIL = deno_default.email;
   data.GITHUB = deno_default.github;
