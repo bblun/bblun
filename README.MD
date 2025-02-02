@@ -88,6 +88,6 @@
 |.glb  | model/gltf-binary|
 |.dds  | image/vnd.ms-dds |
 
-### 如何与`react` `vue`等前端框架集成
+### 如何与`react` `vue`等前端框架集成？
 
 软件最终发布的是静态页面，可以通过`iframe`的方式在任何前端框架中嵌入。
