@@ -18,6 +18,7 @@
 
 - [示例](https://github.com/bblun/examples/)
 - [插件](https://github.com/bblun/plugins/)
+- [.babylon格式导出插件(3dMax、Maya)](https://github.com/BabylonJS/Exporters/releases)
 
 ## 名称由来
 
